@@ -1,5 +1,4 @@
 import OverlayImage1 from "@/components/shared/overlay-images/OverlayImage1";
-import YtEmbed from "@/components/videospage/YtEmbed";
 import VideoList1 from "@/components/videospage/video-lists/VideoList1";
 
 export default function MusicPage() {

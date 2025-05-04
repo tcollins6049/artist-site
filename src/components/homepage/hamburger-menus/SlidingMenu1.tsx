@@ -1,6 +1,8 @@
 "use client"
 
 import { useState } from "react";
+import Link from "next/link";
+import Image from 'next/image';
 
 export default function SlidingMenu({ pathname }: { pathname: string }) {
     const [isOpen, set_isOpen] = useState(false);   // Tracks if menu is open
@@ -66,26 +68,26 @@ export default function SlidingMenu({ pathname }: { pathname: string }) {
                 `}
             >
                 <nav className="flex flex-col space-y-1 text-white font-bold mt-24 w-screen">
-                    <a href="/" className={`text-lg py-2 px-8 block transition-colors duration-200 ${ pathname === "/" ? "bg-[#2a2a2a] hover:bg-[#333]" : "hover:bg-[#2a2a2a]"}`}>HOME</a>
-                    <a href="/tour" className={`text-lg py-2 px-8 block transition-colors duration-200 ${ pathname === "/tour" ? "bg-[#2a2a2a] hover:bg-[#333]" : "hover:bg-[#2a2a2a]"}`}>TOUR</a>
-                    <a href="/music" className={`text-lg py-2 px-8 block transition-colors duration-200 ${ pathname === "/music" ? "bg-[#2a2a2a] hover:bg-[#333]" : "hover:bg-[#2a2a2a]"}`}>MUSIC</a>
-                    <a href="/shop" className={`text-lg py-2 px-8 block transition-colors duration-200 ${ pathname === "/shop" ? "bg-[#2a2a2a] hover:bg-[#333]" : "hover:bg-[#2a2a2a]"}`}>SHOP</a>
-                    <a href="/bio" className={`text-lg py-2 px-8 block transition-colors duration-200 ${ pathname === "/bio" ? "bg-[#2a2a2a] hover:bg-[#333]" : "hover:bg-[#2a2a2a]"}`}>BIO</a>
+                    <Link href="/" className={`text-lg py-2 px-8 block transition-colors duration-200 ${ pathname === "/" ? "bg-[#2a2a2a] hover:bg-[#333]" : "hover:bg-[#2a2a2a]"}`}>HOME</Link>
+                    <Link href="/tour" className={`text-lg py-2 px-8 block transition-colors duration-200 ${ pathname === "/tour" ? "bg-[#2a2a2a] hover:bg-[#333]" : "hover:bg-[#2a2a2a]"}`}>TOUR</Link>
+                    <Link href="/music" className={`text-lg py-2 px-8 block transition-colors duration-200 ${ pathname === "/music" ? "bg-[#2a2a2a] hover:bg-[#333]" : "hover:bg-[#2a2a2a]"}`}>MUSIC</Link>
+                    <Link href="/shop" className={`text-lg py-2 px-8 block transition-colors duration-200 ${ pathname === "/shop" ? "bg-[#2a2a2a] hover:bg-[#333]" : "hover:bg-[#2a2a2a]"}`}>SHOP</Link>
+                    <Link href="/bio" className={`text-lg py-2 px-8 block transition-colors duration-200 ${ pathname === "/bio" ? "bg-[#2a2a2a] hover:bg-[#333]" : "hover:bg-[#2a2a2a]"}`}>BIO</Link>
                 </nav>
 
                 <div className="mt-auto bg-[#222] py-12 px-8 text-center text-white">
                     <div className="flex justify-center space-x-6">
                         <a href="" target="_blank" rel="noopener noreferrer">
-                            <img src="/icons/icons8-instagram.svg" alt="Instagram" className="w-6 h-6 transition-transform duration-200 hover:scale-110" />
+                            <Image src="/icons/icons8-instagram.svg" alt="Instagram" width={24} height={24} className="transition-transform duration-200 hover:scale-110" />
                         </a>
                         <a href="" target="_blank" rel="noopener noreferrer">
-                            <img src="/icons/spotify-white-icon.svg" alt="Spotify" className="w-6 h-6 transition-transform duration-200 hover:scale-110" />
+                            <Image src="/icons/spotify-white-icon.svg" alt="Spotify" width={24} height={24} className="transition-transform duration-200 hover:scale-110" />
                         </a>
                         <a href="" target="_blank" rel="noopener noreferrer">
-                            <img src="/icons/icons8-apple-music.svg" alt="Apple Music" className="w-6 h-6 transition-transform duration-200 hover:scale-110" />
+                            <Image src="/icons/icons8-apple-music.svg" alt="Apple Music" width={24} height={24} className="transition-transform duration-200 hover:scale-110" />
                         </a>
                         <a href="" target="_blank" rel="noopener noreferrer">
-                            <img src="/icons/facebook-app-round-white-icon.svg" alt="Facebook" className="w-6 h-6 transition-transform duration-200 hover:scale-110" />
+                            <Image src="/icons/facebook-app-round-white-icon.svg" alt="Facebook" width={24} height={24} className="transition-transform duration-200 hover:scale-110" />
                         </a>
                     </div>
                 </div>

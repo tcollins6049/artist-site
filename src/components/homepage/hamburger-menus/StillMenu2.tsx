@@ -1,8 +1,10 @@
 "use client"
 
 import { useState } from "react";
+import Link from "next/link";
+import Image from 'next/image';
 
-export default function StillMenu2({ pathname }: { pathname: string }) {
+export default function StillMenu2() {
     const [isOpen, set_isOpen] = useState(false);   // Tracks if menu is open
 
     const toggleMenu = () => set_isOpen(!isOpen);
@@ -65,50 +67,50 @@ export default function StillMenu2({ pathname }: { pathname: string }) {
                 `}
             >
                 <nav className="flex flex-col items-center justify-center space-y-4 text-white font-bold h-full w-screen">
-                    <a href="/" className={`relative text-xl py-2 px-8 block transition-colors duration-300 group hover:translate-y-[1px] ease-in-out transition-transform`}>
+                    <Link href="/" className={`relative text-xl py-2 px-8 block transition-colors duration-300 group hover:translate-y-[1px] ease-in-out transition-transform`}>
                         <span className="relative">
                             HOME
                             <span className="absolute bottom-[-3px] left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
                         </span>
-                    </a>
-                    <a href="/tour" className={`relative text-xl py-2 px-8 block transition-colors duration-300 group hover:translate-y-[1px] ease-in-out transition-transform`}>
+                    </Link>
+                    <Link href="/tour" className={`relative text-xl py-2 px-8 block transition-colors duration-300 group hover:translate-y-[1px] ease-in-out transition-transform`}>
                         <span className="relative">
                             TOUR
                             <span className="absolute bottom-[-3px] left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
                         </span>
-                    </a>
-                    <a href="/music" className={`relative text-xl py-2 px-8 block transition-colors duration-300 group hover:translate-y-[1px] ease-in-out transition-transform`}>
+                    </Link>
+                    <Link href="/music" className={`relative text-xl py-2 px-8 block transition-colors duration-300 group hover:translate-y-[1px] ease-in-out transition-transform`}>
                         <span className="relative">
                             MUSIC
                             <span className="absolute bottom-[-3px] left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
                         </span>
-                    </a>
-                    <a href="/shop" className={`relative text-xl py-2 px-8 block transition-colors duration-300 group hover:translate-y-[1px] ease-in-out transition-transform`}>
+                    </Link>
+                    <Link href="/shop" className={`relative text-xl py-2 px-8 block transition-colors duration-300 group hover:translate-y-[1px] ease-in-out transition-transform`}>
                         <span className="relative">
                             SHOP
                             <span className="absolute bottom-[-3px] left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
                         </span>
-                    </a>
-                    <a href="/bio" className={`relative text-xl py-2 px-8 block transition-colors duration-300 group hover:translate-y-[1px] ease-in-out transition-transform`}>
+                    </Link>
+                    <Link href="/bio" className={`relative text-xl py-2 px-8 block transition-colors duration-300 group hover:translate-y-[1px] ease-in-out transition-transform`}>
                         <span className="relative">
                             BIO
                             <span className="absolute bottom-[-3px] left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
                         </span>
-                    </a>
+                    </Link>
 
                     {/* Social media icons and links */}
                     <div className="flex justify-center space-x-6 mt-6">
                         <a href="" target="_blank" rel="noopener noreferrer">
-                            <img src="/icons/icons8-instagram.svg" alt="Instagram" className="w-6 h-6 transition-transform duration-200 hover:scale-110" />
+                            <Image src="/icons/icons8-instagram.svg" alt="Instagram" width={24} height={24} className="transition-transform duration-200 hover:scale-110" />
                         </a>
                         <a href="" target="_blank" rel="noopener noreferrer">
-                            <img src="/icons/spotify-white-icon.svg" alt="Spotify" className="w-6 h-6 transition-transform duration-200 hover:scale-110" />
+                            <Image src="/icons/spotify-white-icon.svg" alt="Spotify" width={24} height={24} className="transition-transform duration-200 hover:scale-110" />
                         </a>
                         <a href="" target="_blank" rel="noopener noreferrer">
-                            <img src="/icons/icons8-apple-music.svg" alt="Apple Music" className="w-6 h-6 transition-transform duration-200 hover:scale-110" />
+                            <Image src="/icons/icons8-apple-music.svg" alt="Apple Music" width={24} height={24} className="transition-transform duration-200 hover:scale-110" />
                         </a>
                         <a href="" target="_blank" rel="noopener noreferrer">
-                            <img src="/icons/facebook-app-round-white-icon.svg" alt="Facebook" className="w-6 h-6 transition-transform duration-200 hover:scale-110" />
+                            <Image src="/icons/facebook-app-round-white-icon.svg" alt="Facebook" width={24} height={24} className="transition-transform duration-200 hover:scale-110" />
                         </a>
                     </div>
                 </nav>

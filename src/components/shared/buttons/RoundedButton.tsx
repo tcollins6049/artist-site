@@ -1,7 +1,7 @@
 interface RoundedButtonProps {
     text: string;
-    hasBorder?: Boolean;
-    isTransparent?: Boolean;
+    hasBorder?: boolean;
+    isTransparent?: boolean;
     bgColor?: string;
     textColor?: string;
     moreSettings?: string;  // If another component wants to add additional customization to the button

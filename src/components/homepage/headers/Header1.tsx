@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { rye } from "@/styles/fonts";
 import SlidingMenu1 from "../hamburger-menus/SlidingMenu1";
-import StillMenu2 from "../hamburger-menus/StillMenu2";
 
 export function Header1() {
     const pathname = usePathname();
@@ -29,7 +28,7 @@ export function Header1() {
         >
             {/* Large screen header - Only visible on larger screens */}
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between lg:flex hidden">
-                <div className={`text-2xl font-bold pl-15 z-50 ${rye.variable} font-rye`}>Cole Goodwin</div>
+                <div className={`text-2xl font-bold pl-15 z-50 ${rye.variable} font-rye`}>Artist Name</div>
 
                 <nav className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 flex justify-center space-x-0 font-bold text-sm">
                     <Link href="/" className={`px-3 py-2 transition duration-200 ${pathname === "/" ? "underline underline-offset-4 hover:decoration-2" : "hover:underline decoration-1 underline-offset-4"}`}>HOME</Link>
@@ -41,7 +40,7 @@ export function Header1() {
             </div>
 
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-center md:flex lg:hidden">
-                <div className={`text-2xl font-bold mx-auto z-50 ${rye.variable} font-rye`}>Cole Goodwin</div>
+                <div className={`text-2xl font-bold mx-auto z-50 ${rye.variable} font-rye`}>Artist Name</div>
                 <SlidingMenu1 pathname={pathname} />
             </div>
             
